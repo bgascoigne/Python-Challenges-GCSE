@@ -1,0 +1,28 @@
+--------------------------------------------------------
+Exercise 1:
+
+test = input("Is it raining? y/n ")
+if test == "y":
+    print("Oh dear, no football today!")
+
+#removing the indent from the if statement returns an indentation error.
+#Typing in a capital Y returns nothing.
+#By changing the y to capital in the code, the user will have to input a capital as well.
+
+--------------------------------------------------------
+Exercise 2:
+
+test = input("Is it raining? y/n ")
+if test in ["y", "Y", "yes", "Yes"]:
+    print("Oh dear, no football today!")
+
+--------------------------------------------------------
+Exercise 3:
+
+test = input("Is it raining? y/n ")
+if test in ["y", "Y", "yes", "Yes"]:
+    print("Oh dear, no football today!")
+else:
+    print("Great we can play!")
+
+--------------------------------------------------------
