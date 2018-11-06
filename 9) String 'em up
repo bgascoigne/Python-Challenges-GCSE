@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------
+Exercise 1:
+
+myList = ["Eggs", "Beans", "Sausages", "Bacon", "Hash Browns", "Coffee"]
+print("My favourite items from my breakfast today were", *myList[0:3],sep=", ")
+
+----------------------------------------------------------------------------
+Exercise 2:
+
+stillAdding = input("Do you want to add a character?(y/n):")
+listOfCharacters = ["Batman", "Superman", "Deadpool"]
+
+while stillAdding in ["y", "Y", "Yes", "yes"]:
+    newCharacter = input("Which new character would you like to add?:")
+    listOfCharacters.append(newCharacter)
+    stillAdding = input("Do you want to add a character?(y/n):")
+print(listOfCharacters)
+
+----------------------------------------------------------------------------
