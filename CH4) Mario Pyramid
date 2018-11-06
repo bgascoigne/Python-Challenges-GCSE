@@ -1,0 +1,7 @@
+base = "x"
+height = int(input("How tall do you want the pyramid?:"))
+
+while height != 0:
+    print(base)
+    base += "xx"
+    height -= 1
