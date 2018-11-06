@@ -1,0 +1,6 @@
+number = int(input("Please insert a whole number:"))
+
+if(number % 3 == 0):
+    print("Number is divisible by 3.")
+else:
+    print("Number is not divisible by 3.")
