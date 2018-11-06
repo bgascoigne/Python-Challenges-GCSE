@@ -1,0 +1,18 @@
+-------------------------------------------------
+Exercise 1:
+
+edSheeranDOB = 1991
+MyAge = int(input('When were you born?'))
+AgeDifference = MyAge - edSheeranDOB
+print("Ed Sheeran is %d years older than you" % AgeDifference)
+
+-------------------------------------------------
+Exercise 2:
+
+nameOfCeleb = str(input("Which celeb will you compare your age to?:"))
+dobOfCeleb = int(input("What year were they born in?:"))
+MyAge = int(input('When were you born?'))
+AgeDifference = MyAge - dobOfCeleb
+print(nameOfCeleb, "is %d years older than you" % AgeDifference)
+
+-------------------------------------------------
