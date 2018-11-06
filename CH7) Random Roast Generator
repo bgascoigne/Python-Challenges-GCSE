@@ -1,0 +1,6 @@
+import random
+
+victimName = str(input("What is the name of the person you wish to roast?"))
+roastList = ["Yeah, well you are stupid ", "Just because you have a big nose ", "You look like you fell in a bush "]
+roast = random.choice(roastList)
+print(roast + victimName)
