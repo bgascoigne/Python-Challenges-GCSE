@@ -1,0 +1,14 @@
+---------------------------------------------------------
+Exercise 1:
+
+usersHeight = int(input("What is your height?:"))
+myHeight = 194
+
+if(usersHeight > myHeight):
+    print ("You are taller than me!")
+elif(usersHeight == myHeight):
+    print("We are the same height!")
+else:
+    print("I am taller than you!")
+    
+---------------------------------------------------------
