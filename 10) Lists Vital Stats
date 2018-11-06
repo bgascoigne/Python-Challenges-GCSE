@@ -1,0 +1,22 @@
+---------------------------------------------------------------------
+Exercise 1:
+
+total = 0
+listOfNumbers = [1, 2, 3, 4, 5, 6]
+for num in listOfNumbers:
+    total += num
+print (total)
+
+---------------------------------------------------------------------
+Exercise 2:
+
+numList = [1,2,3,4,5,6]
+
+print(numList)
+print(sum(numList))
+print(min(numList))
+print(max(numList))
+print(len(numList))
+print(sum(numList)/len(numList))
+
+---------------------------------------------------------------------
