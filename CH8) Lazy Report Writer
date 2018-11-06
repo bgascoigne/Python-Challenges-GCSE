@@ -1,0 +1,6 @@
+import random
+
+studentName = str(input("What is the name of the student the report is for?"))
+commentList = ["You are putting in a lot of effort ", "I'm happy with your grades this year ", "Keep this up in the exam "]
+comment = random.choice(commentList)
+print(comment + studentName)
