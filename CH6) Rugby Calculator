@@ -1,0 +1,25 @@
+def CalculatingWinner(team1, team2):
+    oneTrys = int(input("How many points were awarded to team 1 for trys?:"))
+    oneConversion = int(input("How many points were awarded to team 1 for conversions?:"))
+    onePenaltys = int(input("How many points were awarded to team 1 for penalys?:"))
+    totalOne = onePenaltys + oneConversion + oneTrys
+
+    twoTrys = int(input("How many points were awarded to team 2 for trys?:"))
+    twoConversion = int(input("How many points were awarded to team 2 for conversions?:"))
+    twoPenaltys = int(input("How many points were awarded to team 2 for penalys?:"))
+    totalTwo = twoPenaltys + twoConversion + twoTrys
+
+    if(totalOne < totalTwo):
+        print(team2, "won this game, they won with:")
+        print(twoTrys, "points from trys.")
+        print(twoConversion, "points from conversions.")
+        print(twoPenaltys, "points from penaltys.")
+    else:
+        print(team1, "won this game, they won with:")
+        print(oneTrys, "points from trys.")
+        print(oneConversion, "points from conversions.")
+        print(onePenaltys, "points from penaltys.")
+
+team1 = input("What is the name of team 1:")
+team2 = input("What is the name of team 2:")
+CalculatingWinner(team1, team2)
