@@ -14,4 +14,4 @@ else:                                       #If its PM
         print (currentTime)
     else:
         currentTime = currentTHTime + 1200
-        print(currentTime)
+        print(currentTime) 
