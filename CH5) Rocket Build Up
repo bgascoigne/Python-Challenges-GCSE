@@ -1,0 +1,7 @@
+timeNeededToCharge = 5100
+currentTime = 1400
+
+endTime = timeNeededToCharge + currentTime
+while endTime > 2300:
+    endTime -= 1200
+print (endTime)
