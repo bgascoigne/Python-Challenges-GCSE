@@ -1,0 +1,17 @@
+currentTHTime = int(input("What is the current twelve hour time? (HHMM): "))
+isAm = str(input("Is it AM or PM: "))
+
+if isAm in ["AM", "am", "Am", "aM"]:        #If its AM
+    if currentTHTime == 1200:               #12am is the only exception for change
+        currentTime = "0000"
+        print(currentTime)
+    else:
+        currentTime = currentTHTime
+        print(currentTime)
+else:                                       #If its PM
+    if currentTHTime == 1200:               #12pm is the only exception for change
+        currentTime = currentTHTime
+        print (currentTime)
+    else:
+        currentTime = currentTHTime + 1200
+        print(currentTime)
