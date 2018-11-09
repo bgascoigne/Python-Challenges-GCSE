@@ -1,0 +1,36 @@
+# BMI = Weight / Height^2
+# Weight (KG)
+# Height (M)
+# UNDERWEIGHT = BMI < 18.5
+# NORMAL WEIGHT =  18.5 <= BMI < 25
+# OVERWEIGHT = 25 <= BMI < 30
+# OBESITY = 30 <= BMI
+#--------------------------------------------------------------
+
+# FIND THE BMI
+def FindingBMI(weight, height):
+    height = height/100
+    BMI = 0
+    height = height**2
+    BMI = weight / height
+    return BMI
+
+# ASSIGN WEIGHT CAT
+def AssigningBMICatagory(BMI):
+    catagory = ""
+    if BMI < 18.5:
+        catagory = "Underweight"
+    if (18.5 <= BMI) and (BMI < 25):
+        catagory = "Normal Weight"
+    if(25 <= BMI) and (BMI < 30):
+        catagory = "Overweight"
+    if 30 <= BMI:
+        catagory = "Obese"
+    return catagory
+
+weight = float(input("What is your weight? (in KG):"))
+height = float(input("What is your height? (in CM):"))
+BMI = FindingBMI(weight, height)
+catagory = AssigningBMICatagory(BMI)
+print("Your BMI is:", format(BMI, '.2f'))
+print("You fall under catagory:", catagory)
