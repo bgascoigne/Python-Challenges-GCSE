@@ -1,0 +1,22 @@
+def CalculatingProductsWanted(moneyIn):
+    print("You currently have inserted:", format(moneyIn, '.2f'))
+    waterWanted = int(input("How many bottles of water do you want? (0.40 each):"))
+    chipsWanted = int(input("How many bags of chips do you want? (1.00 each):"))
+    nutsWanted = int(input("How many bags of nuts do you want? (0.50 each):"))
+    candyWanted = int(input("How many lolly pops do you want? (0.70 each):"))
+    total = (waterWanted * 0.4) + (chipsWanted * 1) + (nutsWanted * 0.5) + (candyWanted * 0.7)
+    if(total > moneyIn):
+        print("Insufficient Funds")
+        total = 0
+        return total
+    return total
+
+moneyIn = float(input("How much cash are you putting into the machine?"))
+total = CalculatingProductsWanted(moneyIn)
+if total == 0:
+    print("Returning Change Due To Insufficient Funds.")
+    print("Your change is:", format(moneyIn, '.2f'))
+else:
+    print("All of your items cost:", format(total, '.2f'))
+    change = moneyIn - total
+    print("Your change is:", format(change, '.2f'))
