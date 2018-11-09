@@ -1,0 +1,255 @@
+------------------------------------------------------------------------------------
+Question 1:
+
+for i in range (1000):
+    print("We like Python turtles!")
+    
+------------------------------------------------------------------------------------
+Question 2:
+
+Attribute about cell phone:   Power Button, Volume Buttons, Screen.
+Methods about cell phone:     Power On, Ring, Restart.
+
+------------------------------------------------------------------------------------
+Question 3:
+
+monthsOfYear = ["January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"]
+
+for month in monthsOfYear:
+    print("One month of the year is:", month)
+    
+------------------------------------------------------------------------------------
+Question 4:
+
+import turtle
+
+window = turtle.Screen()
+window.bgcolor("lightgreen")
+
+ttl = turtle.Turtle()
+ttl.color("blue")
+
+ttl.left(3645)
+
+window.mainloop()
+
+------------------------------------------------------------------------------------
+Question 5:
+
+numberSequence = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+
+total = 0
+for number in numberSequence:
+    print(number)
+    print(number ** 2)
+    total += number
+    print(total)
+    baseNumber = 1
+    for x in numberSequence:
+        baseNumber = baseNumber * x
+    print(baseNumber)
+
+------------------------------------------------------------------------------------
+Question 6:
+
+import turtle
+
+def createWindow():
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+    return window
+
+def createTurtle():
+    ttl = turtle.Turtle()
+    ttl.shape("turtle")
+    ttl.color("blue")
+    return ttl
+
+def drawObjects():
+    for n in range(3):          #Triangle
+        ttl.forward(50)
+        ttl.left(120)
+    ttl.penup()
+    ttl.forward(100)
+    ttl.pendown()
+    for n in range(4):          #Square
+        ttl.forward(50)
+        ttl.left(90)
+    ttl.penup()
+    ttl.forward(100)
+    ttl.pendown()
+    for n in range(6):          #Hexagon 
+        ttl.forward(50)
+        ttl.left(60)
+    ttl.penup()
+    ttl.forward(120)
+    ttl.pendown()
+    for n in range(8):          #Octagon
+        ttl.forward(50)
+        ttl.left(45)
+
+window = createWindow()
+ttl = createTurtle()
+drawObjects()
+
+window.mainloop()
+
+------------------------------------------------------------------------------------
+Question 7:
+
+import turtle
+
+def createWindow():
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+    return window
+
+def createTurtle():
+    ttl = turtle.Turtle()
+    ttl.shape("turtle")
+    ttl.color("blue")
+    return ttl
+
+def movement():
+    angleTurns = [160, -43, 270, -97, -43, 200, -940, 17, -86]
+    for angle in angleTurns:
+        ttl.left(angle)
+        ttl.forward(100)
+
+window = createWindow()
+ttl = createTurtle()
+movement()
+
+window.mainloop()
+
+------------------------------------------------------------------------------------
+Question 8:
+
+import turtle
+
+def createWindow():
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+    return window
+
+def createTurtle():
+    ttl = turtle.Turtle()
+    ttl.shape("turtle")
+    ttl.color("blue")
+    return ttl
+
+def movement():
+    angleTurns = [160, -43, 270, -97, -43, 200, -940, 17, -86]
+    endAngle = 0
+    for angle in angleTurns:
+        ttl.left(angle)
+        ttl.forward(100)
+        endAngle += angle
+    return endAngle
+
+window = createWindow()
+ttl = createTurtle()
+endAngle = movement()
+print(360 % endAngle)
+
+window.mainloop()
+
+------------------------------------------------------------------------------------
+Question 9:
+
+20 Degrees.
+
+------------------------------------------------------------------------------------
+Question 10:
+
+import turtle                           #imports the turtle asset pack
+wn = turtle.Screen()                    #creates the window for the turtle
+tess = turtle.Turtle()                  #creates the turtle
+tess.right(90)                          #turns the turtle 90 degrees clockwise
+tess.left(3600)                         #makes the turtle spin 10 times anticlockwise
+tess.right(-90)                         #turns the turle 90 degrees anticlockwise
+tess.speed(10)                          #sets the turtle speed to 10
+tess.left(3600)                         #makes the turtle spin 10 times anticlockwise again
+tess.speed(0)                           #Either returns an error or makes the turtle stop moving
+tess.left(3645)                         #makes the turtle do 11 spins anticlockwise and then 3/4 of a spin
+tess.forward(-100)                      #Turtle moves back 100 units
+
+------------------------------------------------------------------------------------
+Question 11:
+
+import turtle
+
+def createWindow():
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+    return window
+
+def createTurtle():
+    ttl = turtle.Turtle()
+    ttl.shape("turtle")
+    ttl.color("blue")
+    return ttl
+
+def drawStar():
+    for m in range(5):
+        ttl.forward(100)
+        ttl.left(145)
+
+window = createWindow()
+ttl = createTurtle()
+drawStar()
+
+window.mainloop()
+
+------------------------------------------------------------------------------------
+Question 12:
+
+import turtle
+
+def createWindow():
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+    return window
+
+def createTurtle():
+    ttl = turtle.Turtle()
+    ttl.shape("turtle")
+    ttl.color("blue")
+    return ttl
+
+def drawClock():
+    for n in range(12):
+        ttl.penup()
+        ttl.forward(100)
+        ttl.pendown()
+        ttl.forward(10)
+        ttl.penup()
+        ttl.forward(10)
+        ttl.stamp()
+        ttl.backward(120)
+        ttl.right(30)
+
+window = createWindow()
+ttl = createTurtle()
+drawClock()
+
+window.mainloop()
+
+------------------------------------------------------------------------------------
+Question 13:
+
+print(type(ttl))
+
+<class 'turtle.Turtle'>
+
+------------------------------------------------------------------------------------
+Question 14:
+
+Bale
+
+------------------------------------------------------------------------------------
+Question 15:
+
+bed of pythons
+
+------------------------------------------------------------------------------------
