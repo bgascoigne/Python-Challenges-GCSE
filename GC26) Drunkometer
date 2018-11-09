@@ -1,0 +1,13 @@
+passes = 0
+while True:
+    if passes == 2:
+        break
+    print("Welcome, Crane Operator, to the drunk test to ensure you are not intoxicated at work.")
+    userAttempt = input("Please repeat this phrase - 'Jammy jimmy jammed himself out of juvie':")
+    if userAttempt in ["jammy jimmy jammed himself out of juvie", "Jammy jummy jammed himself out of juvie"]:
+        print("Phrase correct, please repeat it for insurance purposes.")
+        passes += 1
+    else:
+        print("Sorry, that is incorrect............drunk boy...........")
+        continue
+print("Access Granted")
