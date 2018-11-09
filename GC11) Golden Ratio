@@ -1,0 +1,9 @@
+def FindHeight(length):
+    height = 0
+    goldenRatio = 1.61803398874989484820
+    height = float(length)/goldenRatio
+    return height
+
+length = input("What is the length of the painting you are creating?")
+height = FindHeight(length)
+print("The height for this painting should be:", format(height, '.2f'))
