@@ -1,0 +1,12 @@
+import random
+
+randomValue = random.randint(0, 100)
+while True:
+    userGuess = int(input("The computer has generated a number between 0 and 100, what do you think it is?:"))
+    if userGuess > randomValue:
+        print("Your guess was too high!")
+    elif userGuess < randomValue:
+        print("Your guess was too low!")
+    elif userGuess == randomValue:
+        print("Congratulations! You guessed the number!")
+        break
