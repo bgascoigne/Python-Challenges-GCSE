@@ -1,0 +1,8 @@
+while True:
+    try:
+        float(input("Please input a float number:"))
+        print("Thanks!")
+        break
+    except:
+        print("That is not a float number.")
+        continue
