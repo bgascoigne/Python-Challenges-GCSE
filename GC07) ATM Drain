@@ -1,0 +1,18 @@
+import random
+
+def askUserForWithdrawalAmount(currentBalance):
+    while True:
+        print("Your current balance is:", format(currentBalance, '.2f'))
+        amountToTake = int(input("How much money would you like to withdraw? (This machine only withdraws in increments of 5):"))
+        if (amountToTake < (currentBalance - 0.5)) and (amountToTake % 5 == 0):
+            return amountToTake
+            break
+
+def CalculatingNewBankBalance(currentBalance, withdrawalAmount):
+    currentBalance -= (withdrawalAmount + 0.5)
+    return currentBalance
+
+currentBalance = random.randint (0, 100)
+withdrawalAmount = askUserForWithdrawalAmount(currentBalance)
+newBalance = CalculatingNewBankBalance(currentBalance, withdrawalAmount)
+print("Your new bank balance is:", format(newBalance, '.2f'))
