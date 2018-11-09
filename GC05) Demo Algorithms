@@ -1,0 +1,23 @@
+#Variable
+newVariable = "Hello World!"
+
+#Selection
+if newVariable in ["a", "b", "c"]:
+    print("Do Something")
+
+#Repetition
+for i in range(50):
+    print("Do something 50 times")
+
+#Sequence
+def jump_One():
+    print("Jump one statements go here")
+
+def jump_two():
+    print("Jump two statements go here")
+
+jump_One()
+jump_two()
+jump_One()
+jump_One()
+jump_two
