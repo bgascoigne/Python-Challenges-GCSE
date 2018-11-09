@@ -1,0 +1,27 @@
+import turtle
+import random
+
+def createWindow():
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+    return window
+
+def createTurtle():
+    ttl = turtle.Turtle()
+    ttl.shape("turtle")
+    ttl.color("blue")
+    return ttl
+
+def movement():
+    angle = random.randint(-360, 360)
+    ttl.left(angle)
+    ttl.forward(100)
+
+window = createWindow()
+ttl = createTurtle()
+amount = int(input("How many random steps do you want the pirate to take?:"))
+while amount > 0:
+    movement()
+    amount -= 1
+
+window.mainloop()
