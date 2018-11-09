@@ -1,0 +1,8 @@
+colaBottleLevel = 99
+while True:
+    if colaBottleLevel > 0:
+        print (colaBottleLevel, "bottles of cola on the wall.", colaBottleLevel, "bottles of cola, take one down, pass it around,")
+        colaBottleLevel -= 1
+    else:
+        print("No more bottles of cola on the wall!")
+        break
