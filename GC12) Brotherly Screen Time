@@ -1,0 +1,21 @@
+import time
+
+while True:
+    childOneTime = int(input("How much time should child one get? (sec):"))
+    childtwoTime = int(input("How much time should child two get? (sec):"))
+
+    print("It is child ones turn on the PS4.")
+    while childOneTime >= -1:
+        time.sleep(1)
+        print("You have", childOneTime, "seconds left on the PS4.")
+        childOneTime -= 1
+
+    print("It is child twos turn on the PS4.")
+    while childtwoTime >= 0:
+        print("You have", childtwoTime, "seconds left on the PS4.")
+        time.sleep(1)
+        childtwoTime -= 1
+
+    playAgain = input("Do you want to play again?:")
+    if playAgain in ["no", "No", "n", "N", "NO"]:
+        break
