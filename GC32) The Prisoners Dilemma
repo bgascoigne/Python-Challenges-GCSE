@@ -1,0 +1,49 @@
+import random
+
+def ComputerChoice():
+    choice = random.randint(1,2)
+    if(choice == 1):
+        choice = "confess"
+    elif (choice == 2):
+        choice = "stay silent"
+    return choice
+
+def GettingTheUsersChoice():
+    choice = input("So, do you choose to confess(A) or stay silent(B):")
+    if choice in ["a", "A"]:
+        choice = "confess"
+        return choice
+    else:
+        choice = "stay silent"
+        return choice
+
+def DecideSentence(usersChoice, computersChoice):
+    if usersChoice == "confess" and computersChoice == "confess":
+        print("You will now serve 5 years.")
+    elif usersChoice == "stay silent" and computersChoice == "stay silent":
+        print("You will now serve 1 years.")
+    elif usersChoice == "confess" and computersChoice == "stay silent":
+        print("Congratulations, you are now released.")
+    elif usersChoice == "stay silent" and computersChoice == "confess":
+        print("You will now serve 20 years.")
+
+def PrintIntoduction():
+    print("Hello, Prisoner", random.randint(1000, 9999))
+    print("You and one other prisoner is on trial for a murder.")
+    print("If you choose to stay silent and the other prisoner confesses, you will serve 20 years in prison.")
+    print("The same as if you confess, and the other prisoner stays silent, you will be released with no charges.")
+    print("If you both choose to stay silent, you will be in prison for only 1 year.")
+    print("If both of you confess, you will both serve 5 years.")
+    print("Choose wisely.")
+
+while True:
+    replay = input("Do you want to play?:")
+    if replay in ["n", "N", "No", "no"]:
+        print("Thanks for playing.")
+        break
+    PrintIntoduction()
+    computersChoice = ComputerChoice()
+    usersChoice = GettingTheUsersChoice()
+    print("You chose to", usersChoice)
+    print("Your fellow prisoner chose to", computersChoice)
+    DecideSentence(usersChoice, computersChoice)
