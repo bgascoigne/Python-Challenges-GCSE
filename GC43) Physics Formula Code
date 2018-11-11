@@ -1,0 +1,23 @@
+while True:
+    neededVal = input("Which value don't you have?('distance', 'speed' or 'time'):")
+    if neededVal == "speed":
+        distance = float(input("What is the ditance?:"))
+        time = float(input("What is the time?:"))
+        speed = distance / time
+        print("The speed is:", speed)
+
+    elif neededVal == "distance":
+        speed = float(input("What is the speed?:"))
+        time = float(input("What is the time?:"))
+        distance = speed * time
+        print("The distance is:", distance)
+
+    elif neededVal == "time":
+        speed = float(input("What is the speed?:"))
+        distance = float(input("What is the distance?:"))
+        time = distance / speed
+        print("The time is:", time)
+
+    again = input("Do you want to work out another sum?:")
+    if again in ["n", "N", "No", "no", "NO"]:
+        break
