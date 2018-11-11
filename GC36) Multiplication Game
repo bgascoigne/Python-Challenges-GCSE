@@ -1,0 +1,16 @@
+import random
+
+print("Welcome to the multiplication game!")
+while True:
+    mult1 = random.randint(1, 12)
+    mult2 = random.randint(1, 12)
+    answer = mult1 * mult2
+    userAnswer = int(input("What is " + str(mult1) + " x " + str(mult2) + "?:"))
+    if(userAnswer != answer):
+        print("Sorry that is incorrect!")
+    else:
+        print("That is correct, well done!")
+    playAgain = str(input("Would you like to play again?"))
+    if playAgain in ["n","N","No","no","NO"]:
+        print("Thanks for playing!")
+        break
