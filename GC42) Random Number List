@@ -1,0 +1,15 @@
+import random
+
+numList = []
+for num in range(1, 51):
+    numList.append(random.randint(1, 100))
+print ("Random generated list of numbers is:", *numList,sep=", ")
+
+#Finding the minimum value
+print("The minimum value in this list is:", min(numList))
+
+#Finding the maximum value
+print("The maximum value in this list is:", max(numList))
+
+#Finding the average value
+print("The average value in this list is:", (sum(numList) / len(numList)))
