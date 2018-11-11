@@ -1,0 +1,48 @@
+print("Welcome to: You Think You Know Each Other!")
+player1 = input("What is the name of player 1?:")
+player2 = input("What is the name of player 2?:")
+user1Score = 0
+user2Score = 0
+
+while True:
+    #PLAYER ONES QUESTION
+    print("Okay", player2, "turn around while", player1, "types their question.")
+    user1Question = input("Okay " + player1 + " what is your question for " + player2 + "?:")
+    user1Answer = input("And what is the real answer?:").upper()
+    print("Okay", player2, "can turn around now.")
+    print("So this is your question:")
+    print(user1Question)
+    user2Guess = input("What is the answer to his question?:").upper()
+    if user1Answer == user2Guess:
+        print("Congratulations that is correct! One more point!")
+        user2Score += 1
+    else:
+        print("Sorry that was incorrect, no points for you!")
+
+    #PLAYER TWOS QUESTION
+    print("Okay", player1, "turn around while", player2, "types their question.")
+    user2Question = input("Okay " + player2 + " what is your question for " + player1 + "?:")
+    user2Answer = input("And what is the real answer?:").upper()
+    print("Okay", player1, "can turn around now.")
+    print("So this is your question:")
+    print(user2Question)
+    user1Guess = input("What is the answer to his question?:").upper()
+    if user2Answer == user1Guess:
+        print("Congratulations that is correct! One more point!")
+        user1Score += 1
+    else:
+        print("Sorry that was incorrect, no points for you!")
+
+    #Finalising scores or restart game
+    anotherRound = input("Would you like to play another round?:")
+    if anotherRound in ["n", "N", "no", "NO", "No"]:
+        print("So lets hear the final scores!")
+        if(user1Score > user2Score):
+            print("So in second place today we have", player2, "with a total of", user2Score, "points!")
+            print("But in first place is", player1, "with a total of", user1Score, "points!")
+        elif(user1Score < user2Score):
+            print("So in second place today we have", player1, "with a total of", user1Score, "points!")
+            print("But in first place is", player2, "with a total of", user2Score, "points!")
+        if(user1Score == user2Score):
+            print("Wow! Turns out we have a tie, where both players have a total of", user1Score)
+        break
