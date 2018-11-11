@@ -1,0 +1,12 @@
+totalCals = 0
+dailyCals = 2500
+while True:
+    amountOfItems = int(input("How many food items do you want to add?:"))
+    for food in range(1, amountOfItems + 1):
+        itemCals = int(input("How many calories does item " + str(food) + " have?:"))
+        totalCals += itemCals
+        print("You only need to consume " + str(dailyCals - totalCals) + " calories today.")
+    endDay = str(input("Are these the only consumed foods for today?:"))
+    if endDay in ["y","Y","yes","Yes","YES"]:
+        print("Today you have consumed", totalCals, "calories.")
+        break
