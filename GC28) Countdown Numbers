@@ -1,0 +1,80 @@
+import random
+from time import sleep
+
+#Define  Variables
+TOTALNUMBERS = 6
+numbersmall = int()
+numberlarge = int()
+LARGENUMBER1 = int()
+LARGENUMBER2 = int()
+LARGENUMBER3 = int()
+LARGENUMBER4 = int()
+
+def clearScreen():
+    print("\n" *50)
+
+
+LARGENUMBER1 = 25
+LARGENUMBER2 = 50
+LARGENUMBER3 = 75
+LARGENUMBER4 = 100
+largenumberlist =[]
+smallnumberlist =[]
+largenumberchoice = [LARGENUMBER1, LARGENUMBER2, LARGENUMBER3, LARGENUMBER4]
+smallnumberchoice = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10]
+
+
+
+
+clearScreen()
+print ("Welcome to the Countdown Numbers Game!\n")
+print ("You must choose how many large numbers you would like:\n\t From none to  four large numbers.")
+print ("The remaining numbers will be randomly chosen from one to ten")
+print ("\nA random three-digit target will be generated and you will  have 30 seconds to get as near to the target as possible")
+print ("\nYou can combine any of the six numbers using addition, subtraction, multiplication and division!")
+print ("\tNot all numbers need to be used in your solution.")
+
+
+#User Choice for Number of Large Numbers 0-4
+while True:
+    numberoflargenumbers = int(input("\nHow many large numbers would you like to choose? (0 to 4)"))
+    if numberoflargenumbers >= 5:
+        print ("Please enter a number between 0 and 4")
+    else:
+        numberofsmallnumbers = TOTALNUMBERS - numberoflargenumbers
+        break
+
+#Decide the Small Numbers
+count = 0
+for n in range(0, numberofsmallnumbers):
+    numbersmall = random.choice(smallnumberchoice)
+    smallnumberlist.append(numbersmall)
+    smallnumberchoice.remove(numbersmall)
+count = 0
+for n in range(0, numberoflargenumbers):
+    numberlarge = random.choice(largenumberchoice)
+    largenumberlist.append(numberlarge)
+    largenumberchoice.remove(numberlarge)
+target = random.randint (100,999)
+sleep(1.0)
+clearScreen()
+print ("\nThe numbers are as follows\n")
+strsmallnumber = (str(smallnumberlist).strip('[]'))
+strlargenumber = (str(largenumberlist).strip('[]'))
+print ("The small numbers are",strsmallnumber,"and the large numbers are",strlargenumber,"\n")
+print ("The Target number is", target)
+pause = input ("\nPress Enter to continue")
+clearScreen()
+counternumber = 31
+for x in range (0,31):
+    print ("The Target number is", target)
+    print ("The numbers to be used are as follows\n")
+    print ("The small numbers are",strsmallnumber,"and the large numbers are",strlargenumber)
+    counternumber = counternumber-1
+    print (counternumber,"Seconds left")
+    sleep(1.0)
+    clearScreen()
+print ("Time is Up!!!\n")
+print ("\tThe Target number is", target)
+print ("\tThe numbers used were as follows")
+print ("\tThe small numbers are",strsmallnumber,"and the large numbers are",strlargenumber)
