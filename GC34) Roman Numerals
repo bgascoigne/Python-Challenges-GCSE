@@ -1,0 +1,23 @@
+numMap = [(100, 'C'), (90, 'XC'), (50, 'L'),
+          (40, 'XL'), (10, 'X'), (9, 'IX'),
+          (5, 'V'), (4, 'IV'), (1, 'I')
+          ]
+
+def numToRoman(num):
+    numeral = ""
+    while num > 0:
+        for value, letter in numMap:
+            while num >= value:
+                numeral += letter
+                num -= value
+    return numeral
+
+def incrementNum(num):
+    num += 1
+    return num
+
+number = 0
+for i in range(1, 100 + 1):
+    number = incrementNum(number)
+    numeral = numToRoman(number)
+    print(number, numeral)
